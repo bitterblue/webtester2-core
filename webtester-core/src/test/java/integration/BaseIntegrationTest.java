@@ -24,7 +24,8 @@ import info.novatec.testit.webtester.pages.Page;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class BaseIntegrationTest {
 
-    private static final String TEST_PAGE_SERVER_HOST = System.getProperty("testPageServerHost", "localhost");
+    // TODO: this should be localhost for local test execution, and "172.17.42.1" for remote execution
+    private static final String TEST_PAGE_SERVER_HOST = System.getProperty("testPageServerHost", "172.17.42.1");
 
     private static final int TEST_PAGE_SERVER_PORT = Integer.parseInt(System.getProperty("testPageServerPort", "8080"));
 
